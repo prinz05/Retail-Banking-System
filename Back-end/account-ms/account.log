@@ -1,0 +1,992 @@
+17-08-21 11:59:09.466 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 11:59:09.472 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 11:59:09.472 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 11:59:13.035 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 11:59:13.037 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 11:59:13.333 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 11:59:13.464 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-1 - Starting...
+17-08-21 11:59:13.970 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-1 - Start completed.
+17-08-21 11:59:16.509 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 11:59:16.517 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 11:59:18.328 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 11:59:22.340 restartedMain         INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 11:59:22.394 restartedMain         INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 11:59:22.454 restartedMain         INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 11:59:22.777 restartedMain         INFO .m.a.AccountMsApplication                logStarted   61 Started AccountMsApplication in 15.467 seconds (JVM running for 16.926)
+17-08-21 11:59:22.784 restartedMain         INFO .m.a.AccountMsApplication                      main   20 Account Main Application Started
+17-08-21 12:03:18.449 Thread-2             DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:03:18.693 Thread-2              INFO c.z.h.HikariDataSource                        close  350 HikariPool-1 - Shutdown initiated...
+17-08-21 12:03:18.698 Thread-2              INFO c.z.h.HikariDataSource                        close  352 HikariPool-1 - Shutdown completed.
+17-08-21 12:03:20.603 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:03:20.604 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:03:20.604 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:03:21.400 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:03:21.401 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:03:21.444 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:03:21.458 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-2 - Starting...
+17-08-21 12:03:21.460 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-2 - Start completed.
+17-08-21 12:03:21.480 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-2 - Shutdown initiated...
+17-08-21 12:03:21.481 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-2 - Shutdown completed.
+17-08-21 12:03:21.481 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:03:21.523 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script from resource [URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]]; nested exception is java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script from resource [URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]]; nested exception is java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:305) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.util.Assert.hasText(Assert.java:289) ~[spring-core-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.splitSqlScript(ScriptUtils.java:636) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:252) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+17-08-21 12:03:46.920 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:03:46.920 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:03:46.921 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:03:47.463 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:03:47.463 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:03:47.485 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:03:47.500 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-3 - Starting...
+17-08-21 12:03:47.503 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-3 - Start completed.
+17-08-21 12:03:47.519 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-3 - Shutdown initiated...
+17-08-21 12:03:47.521 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-3 - Shutdown completed.
+17-08-21 12:03:47.521 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:03:47.531 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script from resource [URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]]; nested exception is java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script from resource [URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]]; nested exception is java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:305) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.util.Assert.hasText(Assert.java:289) ~[spring-core-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.splitSqlScript(ScriptUtils.java:636) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:252) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+17-08-21 12:12:38.699 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:12:38.700 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:12:38.700 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:12:39.415 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:12:39.415 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:12:39.440 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:12:39.456 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-4 - Starting...
+17-08-21 12:12:39.458 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-4 - Start completed.
+17-08-21 12:12:39.476 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-4 - Shutdown initiated...
+17-08-21 12:12:39.479 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-4 - Shutdown completed.
+17-08-21 12:12:39.492 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:12:39.505 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ACCOUNT" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42102-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ACCOUNT" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42102-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ACCOUNT" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7599) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseInsert(Parser.java:1747) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:954) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+17-08-21 12:15:44.304 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:15:44.304 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:15:44.304 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:15:44.996 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:15:44.997 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:15:45.035 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:15:45.055 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-5 - Starting...
+17-08-21 12:15:45.058 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-5 - Start completed.
+17-08-21 12:15:45.292 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:15:45.296 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:15:45.758 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:15:45.880 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:15:46.098 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-5 - Shutdown initiated...
+17-08-21 12:15:46.102 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-5 - Shutdown completed.
+17-08-21 12:15:46.103 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:15:46.120 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.table.Table.getColumn(Table.java:703) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseColumn(Parser.java:1450) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseInsert(Parser.java:1749) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:954) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+17-08-21 12:16:24.620 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:16:24.621 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:16:24.622 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:16:25.235 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:16:25.235 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:16:25.260 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:16:25.272 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-6 - Starting...
+17-08-21 12:16:25.274 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-6 - Start completed.
+17-08-21 12:16:25.330 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:16:25.331 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:16:25.585 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:16:25.684 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:16:25.899 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-6 - Shutdown initiated...
+17-08-21 12:16:25.902 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-6 - Shutdown completed.
+17-08-21 12:16:25.903 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:16:25.915 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.table.Table.getColumn(Table.java:703) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseColumn(Parser.java:1450) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseInsert(Parser.java:1749) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:954) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+17-08-21 12:19:58.393 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:19:58.394 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:19:58.394 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:19:59.045 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:19:59.045 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:19:59.070 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:19:59.087 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-7 - Starting...
+17-08-21 12:19:59.091 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-7 - Start completed.
+17-08-21 12:19:59.155 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:19:59.156 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:19:59.417 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:19:59.525 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:19:59.729 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-7 - Shutdown initiated...
+17-08-21 12:19:59.732 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-7 - Shutdown completed.
+17-08-21 12:19:59.733 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:19:59.745 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "ACCOUNTID" not found; SQL statement:
+insert into Account (accountId, customerId, balance, accountType) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.table.Table.getColumn(Table.java:703) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseColumn(Parser.java:1450) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseInsert(Parser.java:1749) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:954) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+17-08-21 12:21:42.206 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:21:42.206 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:21:42.206 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:21:42.814 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:21:42.814 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:21:42.836 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:21:42.850 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-8 - Starting...
+17-08-21 12:21:42.853 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-8 - Start completed.
+17-08-21 12:21:42.907 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:21:42.908 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:21:43.138 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:21:46.126 restartedMain         INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 12:21:46.131 restartedMain         INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 12:21:46.142 restartedMain         INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 12:21:46.210 restartedMain         INFO .m.a.AccountMsApplication                logStarted   61 Started AccountMsApplication in 5.397 seconds (JVM running for 1360.359)
+17-08-21 12:21:46.219 restartedMain         INFO .m.a.AccountMsApplication                      main   20 Account Main Application Started
+17-08-21 12:22:59.086 Thread-10            DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:22:59.300 Thread-10             INFO c.z.h.HikariDataSource                        close  350 HikariPool-8 - Shutdown initiated...
+17-08-21 12:22:59.303 Thread-10             INFO c.z.h.HikariDataSource                        close  352 HikariPool-8 - Shutdown completed.
+17-08-21 12:23:01.242 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:23:01.242 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:23:01.242 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:23:02.011 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:23:02.012 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:23:02.054 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:23:02.076 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-9 - Starting...
+17-08-21 12:23:02.079 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-9 - Start completed.
+17-08-21 12:23:02.173 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:23:02.174 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:23:02.581 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:23:02.684 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:23:02.901 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-9 - Shutdown initiated...
+17-08-21 12:23:02.905 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-9 - Shutdown completed.
+17-08-21 12:23:02.906 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:23:02.916 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script from resource [URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]]; nested exception is java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.UncategorizedScriptException: Failed to execute database script from resource [URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]]; nested exception is java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:305) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: java.lang.IllegalArgumentException: 'script' must not be null or empty
+	at org.springframework.util.Assert.hasText(Assert.java:289) ~[spring-core-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.splitSqlScript(ScriptUtils.java:636) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:252) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+17-08-21 12:23:29.072 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:23:29.072 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:23:29.072 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:23:29.514 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:23:29.514 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:23:29.536 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:23:29.547 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-10 - Starting...
+17-08-21 12:23:29.549 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-10 - Start completed.
+17-08-21 12:23:29.595 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:23:29.596 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:23:29.806 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:23:29.880 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:23:30.088 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-10 - Shutdown initiated...
+17-08-21 12:23:30.106 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-10 - Shutdown completed.
+17-08-21 12:23:30.107 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:23:30.119 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (account_Id, customer_Id, balance, account_Type) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SBACS000000" not found; SQL statement:
+insert into Account (account_Id, customer_Id, balance, account_Type) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (account_Id, customer_Id, balance, account_Type) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS"); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SBACS000000" not found; SQL statement:
+insert into Account (account_Id, customer_Id, balance, account_Type) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "SBACS000000" not found; SQL statement:
+insert into Account (account_Id, customer_Id, balance, account_Type) values ("SBACS000000", "SBCU000000", 0.0, "SAVINGS") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.dml.Insert.prepare(Insert.java:327) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:744) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+17-08-21 12:24:33.916 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:24:33.916 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:24:33.917 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:24:34.461 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:24:34.461 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:24:34.484 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:24:34.497 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-11 - Starting...
+17-08-21 12:24:34.499 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-11 - Start completed.
+17-08-21 12:24:34.552 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:24:34.552 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:24:34.755 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:24:34.841 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:24:35.048 restartedMain         INFO c.z.h.HikariDataSource                        close  350 HikariPool-11 - Shutdown initiated...
+17-08-21 12:24:35.052 restartedMain         INFO c.z.h.HikariDataSource                        close  352 HikariPool-11 - Shutdown completed.
+17-08-21 12:24:35.053 restartedMain         INFO o.a.c.c.StandardService                         log  173 Stopping service [Tomcat]
+17-08-21 12:24:35.064 restartedMain        ERROR o.s.b.SpringApplication               reportFailure  843 Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (account_Id, customer_Id, balance, account_Type) values ('SBACS000000', 'SBCU000000', 0.0, 'SAVINGS'); nested exception is org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'SAVINGS' (ACCOUNT: ""ACCOUNT_TYPE"" INTEGER)"; SQL statement:
+insert into Account (account_Id, customer_Id, balance, account_Type) values ('SBACS000000', 'SBCU000000', 0.0, 'SAVINGS') [22018-200]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.9.jar:5.3.9]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.3.jar:2.5.3]
+	at com.mfpe.account.AccountMsApplication.main(AccountMsApplication.java:19) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.5.3.jar:2.5.3]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/E:/MFPE/Back-end/account-ms/target/classes/data.sql]: insert into Account (account_Id, customer_Id, balance, account_Type) values ('SBACS000000', 'SBCU000000', 0.0, 'SAVINGS'); nested exception is org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'SAVINGS' (ACCOUNT: ""ACCOUNT_TYPE"" INTEGER)"; SQL statement:
+insert into Account (account_Id, customer_Id, balance, account_Type) values ('SBACS000000', 'SBCU000000', 0.0, 'SAVINGS') [22018-200]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:49) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:89) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:145) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:107) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:101) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:76) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:65) ~[spring-boot-2.5.3.jar:2.5.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1845) ~[spring-beans-5.3.9.jar:5.3.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-5.3.9.jar:5.3.9]
+	... 23 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "'SAVINGS' (ACCOUNT: ""ACCOUNT_TYPE"" INTEGER)"; SQL statement:
+insert into Account (account_Id, customer_Id, balance, account_Type) values ('SBACS000000', 'SBCU000000', 0.0, 'SAVINGS') [22018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:194) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.table.Column.getDataConversionError(Column.java:409) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:381) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.table.Table.validateConvertUpdateSequence(Table.java:845) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.dml.Insert.insertRows(Insert.java:187) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.dml.Insert.update(Insert.java:151) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Command.executeUpdate(Command.java:251) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-5.3.9.jar:5.3.9]
+	... 33 common frames omitted
+Caused by: org.h2.message.DbException: Data conversion error converting "SAVINGS" [22018-200]
+	at org.h2.message.DbException.get(DbException.java:194) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.value.Value.convertTo(Value.java:875) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.value.Value.convertTo(Value.java:772) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.value.TypeInfo.cast(TypeInfo.java:515) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.table.Column.validateConvertUpdateSequence(Column.java:378) ~[h2-1.4.200.jar:1.4.200]
+	... 43 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLDataException: Data conversion error converting "SAVINGS" [22018-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:457) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	... 48 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "SAVINGS"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_291]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[na:1.8.0_291]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_291]
+	at org.h2.value.Value.convertToInt(Value.java:982) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.value.Value.convertTo(Value.java:806) ~[h2-1.4.200.jar:1.4.200]
+	... 46 common frames omitted
+17-08-21 12:25:04.298 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 23360 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:25:04.299 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:25:04.299 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:25:04.901 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 12:25:04.901 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 12:25:04.923 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 12:25:04.938 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-12 - Starting...
+17-08-21 12:25:04.940 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-12 - Start completed.
+17-08-21 12:25:04.993 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:25:04.994 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:25:05.198 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:25:08.040 restartedMain         INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 12:25:08.041 restartedMain         INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 12:25:08.046 restartedMain         INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 12:25:08.092 restartedMain         INFO .m.a.AccountMsApplication                logStarted   61 Started AccountMsApplication in 5.197 seconds (JVM running for 1562.242)
+17-08-21 12:25:08.094 restartedMain         INFO .m.a.AccountMsApplication                      main   20 Account Main Application Started
+17-08-21 12:28:11.741 http-nio-9096-exec-5  INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+17-08-21 12:28:11.791 http-nio-9096-exec-5  INFO c.m.a.c.AccountController       getCustomerAccounts   67 requesting account service to get all associated accounts' details
+17-08-21 12:28:11.798 http-nio-9096-exec-5  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  119 fetching account details
+17-08-21 12:28:12.008 http-nio-9096-exec-5 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_, account0_.account_type as account_2_0_, account0_.balance as balance3_0_, account0_.customer_id as customer4_0_ from account account0_ where account0_.customer_id=?
+17-08-21 12:28:12.018 http-nio-9096-exec-5 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBCU000000]
+17-08-21 12:28:12.025 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_1_0_] : [VARCHAR]) - [SBACS000000]
+17-08-21 12:28:12.034 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:28:12.036 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_] : [DOUBLE]) - [0.0]
+17-08-21 12:28:12.036 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:28:12.038 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_1_0_] : [VARCHAR]) - [SBACC000000]
+17-08-21 12:28:12.038 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_] : [INTEGER]) - [CURRENT]
+17-08-21 12:28:12.039 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_] : [DOUBLE]) - [0.0]
+17-08-21 12:28:12.039 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:28:12.055 http-nio-9096-exec-5  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  127 [Account Details:] [AccountDto(accountId=SBACS000000, balance=0.0), AccountDto(accountId=SBACC000000, balance=0.0)]
+17-08-21 12:28:57.600 http-nio-9096-exec-6  INFO c.m.a.c.AccountController                getAccount   98 requesting account service to get account details
+17-08-21 12:28:57.601 http-nio-9096-exec-6  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 12:28:57.634 http-nio-9096-exec-6 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_0_, account0_.account_type as account_2_0_0_, account0_.balance as balance3_0_0_, account0_.customer_id as customer4_0_0_ from account account0_ where account0_.account_id=?
+17-08-21 12:28:57.635 http-nio-9096-exec-6 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBACS000000]
+17-08-21 12:28:57.642 http-nio-9096-exec-6 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:28:57.643 http-nio-9096-exec-6 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_0_] : [DOUBLE]) - [0.0]
+17-08-21 12:28:57.644 http-nio-9096-exec-6 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:28:57.646 http-nio-9096-exec-6  INFO .m.a.s.AccountServiceImpl                getAccount   89 [Account Details:] Account(accountId=SBACS000000, customerId=SBCU000000, balance=0.0, accountType=SAVINGS)
+17-08-21 12:28:57.714 http-nio-9096-exec-7  INFO c.m.a.c.AccountController                getAccount   98 requesting account service to get account details
+17-08-21 12:28:57.715 http-nio-9096-exec-7  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 12:28:57.715 http-nio-9096-exec-7 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_0_, account0_.account_type as account_2_0_0_, account0_.balance as balance3_0_0_, account0_.customer_id as customer4_0_0_ from account account0_ where account0_.account_id=?
+17-08-21 12:28:57.716 http-nio-9096-exec-7 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBACS000000]
+17-08-21 12:28:57.716 http-nio-9096-exec-7 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:28:57.717 http-nio-9096-exec-7 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_0_] : [DOUBLE]) - [0.0]
+17-08-21 12:28:57.717 http-nio-9096-exec-7 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:28:57.718 http-nio-9096-exec-7  INFO .m.a.s.AccountServiceImpl                getAccount   89 [Account Details:] Account(accountId=SBACS000000, customerId=SBCU000000, balance=0.0, accountType=SAVINGS)
+17-08-21 12:31:41.148 http-nio-9096-exec-1  INFO c.m.a.c.AccountController                   deposit  200 requesting account service to deposit amount
+17-08-21 12:31:41.148 http-nio-9096-exec-1  INFO .m.a.s.AccountServiceImpl                   deposit  253 Money deposit under process
+17-08-21 12:31:41.150 http-nio-9096-exec-1 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_0_, account0_.account_type as account_2_0_0_, account0_.balance as balance3_0_0_, account0_.customer_id as customer4_0_0_ from account account0_ where account0_.account_id=?
+17-08-21 12:31:41.151 http-nio-9096-exec-1 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBACS000000]
+17-08-21 12:31:41.152 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:31:41.153 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_0_] : [DOUBLE]) - [0.0]
+17-08-21 12:31:41.153 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:31:41.199 http-nio-9096-exec-1 DEBUG org.hibernate.SQL                      logStatement  144 update account set account_type=?, balance=?, customer_id=? where account_id=?
+17-08-21 12:31:41.201 http-nio-9096-exec-1 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [INTEGER] - [0]
+17-08-21 12:31:41.203 http-nio-9096-exec-1 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [2] as [DOUBLE] - [100.0]
+17-08-21 12:31:41.204 http-nio-9096-exec-1 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [3] as [VARCHAR] - [SBCU000000]
+17-08-21 12:31:41.204 http-nio-9096-exec-1 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [4] as [VARCHAR] - [SBACS000000]
+17-08-21 12:31:41.212 http-nio-9096-exec-1  INFO .m.a.s.AccountServiceImpl                   deposit  274 [ SBACS000000 Transaction Details:] TransactionStatus(message=Money deposit transaction successfull, sourceBalance=0.0, destinationBalance=100.0)
+17-08-21 12:31:49.245 http-nio-9096-exec-2  INFO c.m.a.c.AccountController                getAccount   98 requesting account service to get account details
+17-08-21 12:31:49.245 http-nio-9096-exec-2  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 12:31:49.245 http-nio-9096-exec-2 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_0_, account0_.account_type as account_2_0_0_, account0_.balance as balance3_0_0_, account0_.customer_id as customer4_0_0_ from account account0_ where account0_.account_id=?
+17-08-21 12:31:49.246 http-nio-9096-exec-2 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBACS000000]
+17-08-21 12:31:49.246 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:31:49.247 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_0_] : [DOUBLE]) - [100.0]
+17-08-21 12:31:49.248 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:31:49.249 http-nio-9096-exec-2  INFO .m.a.s.AccountServiceImpl                getAccount   89 [Account Details:] Account(accountId=SBACS000000, customerId=SBCU000000, balance=100.0, accountType=SAVINGS)
+17-08-21 12:31:49.279 http-nio-9096-exec-4  INFO c.m.a.c.AccountController                getAccount   98 requesting account service to get account details
+17-08-21 12:31:49.280 http-nio-9096-exec-4  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 12:31:49.281 http-nio-9096-exec-4 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_0_, account0_.account_type as account_2_0_0_, account0_.balance as balance3_0_0_, account0_.customer_id as customer4_0_0_ from account account0_ where account0_.account_id=?
+17-08-21 12:31:49.281 http-nio-9096-exec-4 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBACS000000]
+17-08-21 12:31:49.282 http-nio-9096-exec-4 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:31:49.282 http-nio-9096-exec-4 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_0_] : [DOUBLE]) - [100.0]
+17-08-21 12:31:49.282 http-nio-9096-exec-4 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:31:49.283 http-nio-9096-exec-4  INFO .m.a.s.AccountServiceImpl                getAccount   89 [Account Details:] Account(accountId=SBACS000000, customerId=SBCU000000, balance=100.0, accountType=SAVINGS)
+17-08-21 12:31:49.310 http-nio-9096-exec-9  INFO c.m.a.c.AccountController                  withdraw  230 requesting account service to withdraw amount
+17-08-21 12:31:49.311 http-nio-9096-exec-9  INFO .m.a.s.AccountServiceImpl                  withdraw  297 Money withdraw under process
+17-08-21 12:31:49.311 http-nio-9096-exec-9 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_0_, account0_.account_type as account_2_0_0_, account0_.balance as balance3_0_0_, account0_.customer_id as customer4_0_0_ from account account0_ where account0_.account_id=?
+17-08-21 12:31:49.312 http-nio-9096-exec-9 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBACS000000]
+17-08-21 12:31:49.313 http-nio-9096-exec-9 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:31:49.313 http-nio-9096-exec-9 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_0_] : [DOUBLE]) - [100.0]
+17-08-21 12:31:49.314 http-nio-9096-exec-9 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:31:49.316 http-nio-9096-exec-9 DEBUG org.hibernate.SQL                      logStatement  144 update account set account_type=?, balance=?, customer_id=? where account_id=?
+17-08-21 12:31:49.317 http-nio-9096-exec-9 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [INTEGER] - [0]
+17-08-21 12:31:49.317 http-nio-9096-exec-9 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [2] as [DOUBLE] - [50.0]
+17-08-21 12:31:49.318 http-nio-9096-exec-9 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [3] as [VARCHAR] - [SBCU000000]
+17-08-21 12:31:49.318 http-nio-9096-exec-9 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [4] as [VARCHAR] - [SBACS000000]
+17-08-21 12:31:49.320 http-nio-9096-exec-9  INFO .m.a.s.AccountServiceImpl                  withdraw  323 [ SBACS000000 Transaction Details:] TransactionStatus(message=Money withdraw transaction successfull, sourceBalance=100.0, destinationBalance=50.0)
+17-08-21 12:31:59.990 http-nio-9096-exec-5  INFO c.m.a.c.AccountController       getAccountStatement  179 requesting account service to get account statement
+17-08-21 12:31:59.990 http-nio-9096-exec-5  INFO .m.a.s.AccountServiceImpl       getAccountStatement  203 fetching transaction details
+17-08-21 12:31:59.991 http-nio-9096-exec-5 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_0_, account0_.account_type as account_2_0_0_, account0_.balance as balance3_0_0_, account0_.customer_id as customer4_0_0_ from account account0_ where account0_.account_id=?
+17-08-21 12:31:59.991 http-nio-9096-exec-5 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBACS000000]
+17-08-21 12:31:59.992 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:31:59.992 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_0_] : [DOUBLE]) - [50.0]
+17-08-21 12:31:59.992 http-nio-9096-exec-5 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:31:59.993 http-nio-9096-exec-5  INFO .m.a.s.AccountServiceImpl       getAccountStatement  211 creating the account statement
+17-08-21 12:32:00.041 http-nio-9096-exec-6  INFO c.m.a.c.AccountController                getAccount   98 requesting account service to get account details
+17-08-21 12:32:00.041 http-nio-9096-exec-6  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 12:32:00.042 http-nio-9096-exec-6 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_0_, account0_.account_type as account_2_0_0_, account0_.balance as balance3_0_0_, account0_.customer_id as customer4_0_0_ from account account0_ where account0_.account_id=?
+17-08-21 12:32:00.043 http-nio-9096-exec-6 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBACS000000]
+17-08-21 12:32:00.044 http-nio-9096-exec-6 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:32:00.045 http-nio-9096-exec-6 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_0_] : [DOUBLE]) - [50.0]
+17-08-21 12:32:00.045 http-nio-9096-exec-6 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:32:00.046 http-nio-9096-exec-6  INFO .m.a.s.AccountServiceImpl                getAccount   89 [Account Details:] Account(accountId=SBACS000000, customerId=SBCU000000, balance=50.0, accountType=SAVINGS)
+17-08-21 12:32:00.133 http-nio-9096-exec-5  INFO .m.a.s.AccountServiceImpl       getAccountStatement  230 [Account Statement Details:] Statement(date=Tue Aug 17 12:32:00 IST 2021, accountId=SBACS000000, currentBalance=50.0, history=[com.mfpe.account.model.TransactionsHistory@166040a, com.mfpe.account.model.TransactionsHistory@5c41ad2b, com.mfpe.account.model.TransactionsHistory@763f9a43])
+17-08-21 12:39:44.073 http-nio-9096-exec-3  INFO c.m.a.c.AccountController       getCustomerAccounts   67 requesting account service to get all associated accounts' details
+17-08-21 12:39:44.099 http-nio-9096-exec-3  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  119 fetching account details
+17-08-21 12:39:44.147 http-nio-9096-exec-3 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_, account0_.account_type as account_2_0_, account0_.balance as balance3_0_, account0_.customer_id as customer4_0_ from account account0_ where account0_.customer_id=?
+17-08-21 12:39:44.195 http-nio-9096-exec-3 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBCU000000]
+17-08-21 12:39:44.243 http-nio-9096-exec-3 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_1_0_] : [VARCHAR]) - [SBACS000000]
+17-08-21 12:39:44.262 http-nio-9096-exec-3 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:39:44.269 http-nio-9096-exec-3 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_] : [DOUBLE]) - [50.0]
+17-08-21 12:39:44.270 http-nio-9096-exec-3 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:39:44.271 http-nio-9096-exec-3 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_1_0_] : [VARCHAR]) - [SBACC000000]
+17-08-21 12:39:44.272 http-nio-9096-exec-3 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_] : [INTEGER]) - [CURRENT]
+17-08-21 12:39:44.272 http-nio-9096-exec-3 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_] : [DOUBLE]) - [0.0]
+17-08-21 12:39:44.273 http-nio-9096-exec-3 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:39:44.284 http-nio-9096-exec-3  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  127 [Account Details:] [AccountDto(accountId=SBACS000000, balance=50.0), AccountDto(accountId=SBACC000000, balance=0.0)]
+17-08-21 12:39:57.991 http-nio-9096-exec-1  INFO c.m.a.c.AccountController       getCustomerAccounts   67 requesting account service to get all associated accounts' details
+17-08-21 12:39:57.992 http-nio-9096-exec-1  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  119 fetching account details
+17-08-21 12:39:57.993 http-nio-9096-exec-1 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_, account0_.account_type as account_2_0_, account0_.balance as balance3_0_, account0_.customer_id as customer4_0_ from account account0_ where account0_.customer_id=?
+17-08-21 12:39:57.993 http-nio-9096-exec-1 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBCU000000]
+17-08-21 12:39:57.994 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_1_0_] : [VARCHAR]) - [SBACS000000]
+17-08-21 12:39:57.994 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:39:57.995 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_] : [DOUBLE]) - [50.0]
+17-08-21 12:39:57.995 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:39:57.995 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_1_0_] : [VARCHAR]) - [SBACC000000]
+17-08-21 12:39:57.995 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_] : [INTEGER]) - [CURRENT]
+17-08-21 12:39:57.996 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_] : [DOUBLE]) - [0.0]
+17-08-21 12:39:57.996 http-nio-9096-exec-1 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:39:57.997 http-nio-9096-exec-1  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  127 [Account Details:] [AccountDto(accountId=SBACS000000, balance=50.0), AccountDto(accountId=SBACC000000, balance=0.0)]
+17-08-21 12:40:07.903 http-nio-9096-exec-2  INFO c.m.a.c.AccountController       getCustomerAccounts   67 requesting account service to get all associated accounts' details
+17-08-21 12:40:07.904 http-nio-9096-exec-2  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  119 fetching account details
+17-08-21 12:40:07.904 http-nio-9096-exec-2 DEBUG org.hibernate.SQL                      logStatement  144 select account0_.account_id as account_1_0_, account0_.account_type as account_2_0_, account0_.balance as balance3_0_, account0_.customer_id as customer4_0_ from account account0_ where account0_.customer_id=?
+17-08-21 12:40:07.905 http-nio-9096-exec-2 TRACE o.h.t.d.sql.BasicBinder                        bind   64 binding parameter [1] as [VARCHAR] - [SBCU000000]
+17-08-21 12:40:07.905 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_1_0_] : [VARCHAR]) - [SBACS000000]
+17-08-21 12:40:07.906 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_] : [INTEGER]) - [SAVINGS]
+17-08-21 12:40:07.907 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_] : [DOUBLE]) - [50.0]
+17-08-21 12:40:07.908 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:40:07.909 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_1_0_] : [VARCHAR]) - [SBACC000000]
+17-08-21 12:40:07.911 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([account_2_0_] : [INTEGER]) - [CURRENT]
+17-08-21 12:40:07.912 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([balance3_0_] : [DOUBLE]) - [0.0]
+17-08-21 12:40:07.912 http-nio-9096-exec-2 TRACE o.h.t.d.s.BasicExtractor                    extract   60 extracted value ([customer4_0_] : [VARCHAR]) - [SBCU000000]
+17-08-21 12:40:07.913 http-nio-9096-exec-2  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  127 [Account Details:] [AccountDto(accountId=SBACS000000, balance=50.0), AccountDto(accountId=SBACC000000, balance=0.0)]
+17-08-21 12:46:29.268 main                  INFO a.c.AccountControllerTest               logStarting   55 Starting AccountControllerTest using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 28412 (started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:46:29.273 main                 DEBUG a.c.AccountControllerTest               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:46:29.275 main                  INFO a.c.AccountControllerTest     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:46:34.042 main                  INFO a.c.AccountControllerTest                logStarted   61 Started AccountControllerTest in 7.569 seconds (JVM running for 11.63)
+17-08-21 12:46:34.462 main                  INFO c.m.a.c.AccountController             createAccount   54 requesting account service to create accounts
+17-08-21 12:46:34.843 main                  INFO c.m.a.c.AccountController       getCustomerAccounts   67 requesting account service to get all associated accounts' details
+17-08-21 12:46:35.042 main                 ERROR c.m.a.c.AccountController getAccountStatementBetweenDates  130 JWT required for validating the access to this resource
+17-08-21 12:46:35.135 main                 ERROR c.m.a.c.AccountController                  withdraw  219 JWT required for validating the access to this resource
+17-08-21 12:46:35.234 main                  INFO c.m.a.c.AccountController                   deposit  200 requesting account service to deposit amount
+17-08-21 12:46:35.265 main                 ERROR c.m.a.c.AccountController       getAccountStatement  168 JWT required for validating the access to this resource
+17-08-21 12:47:32.338 main                  INFO a.c.AccountControllerTest               logStarting   55 Starting AccountControllerTest using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 29668 (started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:47:32.342 main                 DEBUG a.c.AccountControllerTest               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:47:32.343 main                  INFO a.c.AccountControllerTest     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:47:36.788 main                  INFO a.c.AccountControllerTest                logStarted   61 Started AccountControllerTest in 6.921 seconds (JVM running for 9.631)
+17-08-21 12:47:37.230 main                  INFO c.m.a.c.AccountController                getAccount   98 requesting account service to get account details
+17-08-21 12:47:37.485 main                  INFO c.m.a.c.AccountController             createAccount   54 requesting account service to create accounts
+17-08-21 12:47:37.623 main                 ERROR c.m.a.c.AccountController                getAccount  104 Only customer can access this resource
+17-08-21 12:47:37.680 main                  INFO c.m.a.c.AccountController       getCustomerAccounts   67 requesting account service to get all associated accounts' details
+17-08-21 12:47:37.731 main                 ERROR c.m.a.c.AccountController       getAccountStatement  184 Only customer can access this resource
+17-08-21 12:47:37.772 main                  INFO c.m.a.c.AccountController       getAccountStatement  179 requesting account service to get account statement
+17-08-21 12:47:37.837 main                 ERROR c.m.a.c.AccountController getAccountStatementBetweenDates  130 JWT required for validating the access to this resource
+17-08-21 12:47:37.864 main                  INFO c.m.a.c.AccountController                  withdraw  230 requesting account service to withdraw amount
+17-08-21 12:47:37.927 main                 ERROR c.m.a.c.AccountController                  withdraw  219 JWT required for validating the access to this resource
+17-08-21 12:47:37.949 main                 ERROR c.m.a.c.AccountController getAccountStatementBetweenDates  146 Only customer can access this resource
+17-08-21 12:47:37.970 main                 ERROR c.m.a.c.AccountController                getAccount   87 JWT required for validating the access to this resource
+17-08-21 12:47:37.998 main                  INFO c.m.a.c.AccountController                   deposit  200 requesting account service to deposit amount
+17-08-21 12:47:38.023 main                 ERROR c.m.a.c.AccountController       getAccountStatement  168 JWT required for validating the access to this resource
+17-08-21 12:47:38.049 main                  INFO c.m.a.c.AccountController getAccountStatementBetweenDates  141 requesting account service to get account statement
+17-08-21 12:49:34.277 main                  INFO .s.AccountServiceImplTest               logStarting   55 Starting AccountServiceImplTest using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 8816 (started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 12:49:34.279 main                 DEBUG .s.AccountServiceImplTest               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 12:49:34.280 main                  INFO .s.AccountServiceImplTest     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 12:49:38.128 main                  INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-1 - Starting...
+17-08-21 12:49:38.745 main                  INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-1 - Start completed.
+17-08-21 12:49:41.772 main                 DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:49:41.781 main                 DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 12:49:47.259 main                  INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 12:49:52.867 main                  INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 12:49:52.943 main                  INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 12:49:53.043 main                  INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 12:49:53.646 main                  INFO .s.AccountServiceImplTest                logStarted   61 Started AccountServiceImplTest in 21.418 seconds (JVM running for 23.622)
+17-08-21 12:49:54.272 main                  INFO .m.a.s.AccountServiceImpl                  withdraw  297 Money withdraw under process
+17-08-21 12:49:54.280 main                 ERROR .m.a.s.AccountServiceImpl                  withdraw  330 Account with account ID: SBACS000001not found
+17-08-21 12:49:54.327 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  203 fetching transaction details
+17-08-21 12:49:54.329 main                 ERROR .m.a.s.AccountServiceImpl       getAccountStatement  236 Account with account ID: SBACS000001not found
+17-08-21 12:49:54.351 main                  INFO .m.a.s.AccountServiceImpl             createAccount   51 Creating accounts
+17-08-21 12:49:54.353 main                  INFO .m.a.s.AccountServiceImpl             createAccount   63 Accounts successfully created
+17-08-21 12:49:54.650 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  145 fetching transaction details
+17-08-21 12:49:54.651 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  159 creating the account statement
+17-08-21 12:49:54.653 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  178 [Account Statement Details:] Statement(date=Tue Aug 17 12:49:54 IST 2021, accountId=SBACS000001, currentBalance=0.0, history=[com.mfpe.account.model.TransactionsHistory@1831447c])
+17-08-21 12:49:54.703 main                  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  119 fetching account details
+17-08-21 12:49:54.707 main                  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  127 [Account Details:] [AccountDto(accountId=SBACS000001, balance=0.0), AccountDto(accountId=SBACC000001, balance=0.0)]
+17-08-21 12:49:54.730 main                  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 12:49:54.731 main                 ERROR .m.a.s.AccountServiceImpl                getAccount  105 Account with account ID: SBACS000001not found
+17-08-21 12:49:54.748 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  145 fetching transaction details
+17-08-21 12:49:54.749 main                 ERROR .m.a.s.AccountServiceImpl       getAccountStatement  184 Account with account ID: SBACS000001not found
+17-08-21 12:49:54.770 main                  INFO .m.a.s.AccountServiceImpl                   deposit  253 Money deposit under process
+17-08-21 12:49:54.772 main                 ERROR .m.a.s.AccountServiceImpl                   deposit  280 Account with account ID: SBACS000001not found
+17-08-21 12:49:54.792 main                  INFO .m.a.s.AccountServiceImpl                  withdraw  297 Money withdraw under process
+17-08-21 12:49:54.796 main                  INFO .m.a.s.AccountServiceImpl                  withdraw  323 [ SBACS000001 Transaction Details:] TransactionStatus(message=Money withdraw transaction successfull, sourceBalance=2000.0, destinationBalance=1000.0)
+17-08-21 12:49:54.818 main                  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 12:49:54.819 main                  INFO .m.a.s.AccountServiceImpl                getAccount   89 [Account Details:] Account(accountId=SBACS000001, customerId=SBCU000001, balance=0.0, accountType=SAVINGS)
+17-08-21 12:49:54.841 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  203 fetching transaction details
+17-08-21 12:49:54.843 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  211 creating the account statement
+17-08-21 12:49:54.846 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  230 [Account Statement Details:] Statement(date=Tue Aug 17 12:49:54 IST 2021, accountId=SBACS000001, currentBalance=0.0, history=[com.mfpe.account.model.TransactionsHistory@28e8dee7])
+17-08-21 12:49:54.886 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  145 fetching transaction details
+17-08-21 12:49:54.887 main                 ERROR .m.a.s.AccountServiceImpl       getAccountStatement  149 Given date range is invalid, From Date should always be before To Date
+17-08-21 12:49:54.907 main                  INFO .m.a.s.AccountServiceImpl                   deposit  253 Money deposit under process
+17-08-21 12:49:54.910 main                  INFO .m.a.s.AccountServiceImpl                   deposit  274 [ SBACS000001 Transaction Details:] TransactionStatus(message=Money deposit transaction successfull, sourceBalance=0.0, destinationBalance=1000.0)
+17-08-21 12:49:54.979 main                  INFO .m.a.s.AccountServiceImpl                  withdraw  297 Money withdraw under process
+17-08-21 12:49:54.980 main                 ERROR .m.a.s.AccountServiceImpl                  withdraw  336 Account with account ID: SBACS000001not found
+17-08-21 12:49:55.003 main                  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 12:49:55.004 main                 ERROR .m.a.s.AccountServiceImpl                getAccount   98 Account with account ID: SBACS000001not found
+17-08-21 12:49:55.070 licationShutdownHook DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 12:49:55.087 licationShutdownHook  INFO c.z.h.HikariDataSource                        close  350 HikariPool-1 - Shutdown initiated...
+17-08-21 12:49:55.095 licationShutdownHook  INFO c.z.h.HikariDataSource                        close  352 HikariPool-1 - Shutdown completed.
+17-08-21 14:55:12.648 main                  INFO a.c.AccountControllerTest               logStarting   55 Starting AccountControllerTest using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 15228 (started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 14:55:12.657 main                 DEBUG a.c.AccountControllerTest               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 14:55:12.658 main                  INFO a.c.AccountControllerTest     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 14:55:17.434 main                  INFO a.c.AccountControllerTest                logStarted   61 Started AccountControllerTest in 8.183 seconds (JVM running for 13.392)
+17-08-21 14:55:17.923 main                  INFO c.m.a.c.AccountController                getAccount   98 requesting account service to get account details
+17-08-21 14:55:18.147 main                  INFO c.m.a.c.AccountController             createAccount   54 requesting account service to create accounts
+17-08-21 14:55:18.326 main                 ERROR c.m.a.c.AccountController                getAccount  104 Only customer can access this resource
+17-08-21 14:55:18.384 main                  INFO c.m.a.c.AccountController       getCustomerAccounts   67 requesting account service to get all associated accounts' details
+17-08-21 14:55:18.438 main                 ERROR c.m.a.c.AccountController       getAccountStatement  184 Only customer can access this resource
+17-08-21 14:55:18.458 main                  INFO c.m.a.c.AccountController       getAccountStatement  179 requesting account service to get account statement
+17-08-21 14:55:18.504 main                 ERROR c.m.a.c.AccountController getAccountStatementBetweenDates  130 JWT required for validating the access to this resource
+17-08-21 14:55:18.531 main                  INFO c.m.a.c.AccountController                  withdraw  230 requesting account service to withdraw amount
+17-08-21 14:55:18.598 main                 ERROR c.m.a.c.AccountController                  withdraw  219 JWT required for validating the access to this resource
+17-08-21 14:55:18.622 main                 ERROR c.m.a.c.AccountController getAccountStatementBetweenDates  146 Only customer can access this resource
+17-08-21 14:55:18.644 main                 ERROR c.m.a.c.AccountController                getAccount   87 JWT required for validating the access to this resource
+17-08-21 14:55:18.666 main                  INFO c.m.a.c.AccountController                   deposit  200 requesting account service to deposit amount
+17-08-21 14:55:18.686 main                 ERROR c.m.a.c.AccountController       getAccountStatement  168 JWT required for validating the access to this resource
+17-08-21 14:55:18.715 main                  INFO c.m.a.c.AccountController getAccountStatementBetweenDates  141 requesting account service to get account statement
+17-08-21 14:55:20.838 main                  INFO AccountMsApplicationTests               logStarting   55 Starting AccountMsApplicationTests using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 15228 (started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 14:55:20.839 main                 DEBUG AccountMsApplicationTests               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 14:55:20.840 main                  INFO AccountMsApplicationTests     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 14:55:23.237 main                  INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-1 - Starting...
+17-08-21 14:55:24.216 main                  INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-1 - Start completed.
+17-08-21 14:55:27.440 main                 DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 14:55:27.452 main                 DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 14:55:30.302 main                  INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 14:55:33.544 main                  INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 14:55:33.631 main                  INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 14:55:33.744 main                  INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 14:55:34.152 main                  INFO AccountMsApplicationTests                logStarted   61 Started AccountMsApplicationTests in 15.386 seconds (JVM running for 30.11)
+17-08-21 14:55:34.393 main                  INFO .m.a.s.AccountServiceImpl                  withdraw  297 Money withdraw under process
+17-08-21 14:55:34.394 main                 ERROR .m.a.s.AccountServiceImpl                  withdraw  330 Account with account ID: SBACS000001not found
+17-08-21 14:55:34.408 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  203 fetching transaction details
+17-08-21 14:55:34.409 main                 ERROR .m.a.s.AccountServiceImpl       getAccountStatement  236 Account with account ID: SBACS000001not found
+17-08-21 14:55:34.423 main                  INFO .m.a.s.AccountServiceImpl             createAccount   51 Creating accounts
+17-08-21 14:55:34.424 main                  INFO .m.a.s.AccountServiceImpl             createAccount   63 Accounts successfully created
+17-08-21 14:55:34.632 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  145 fetching transaction details
+17-08-21 14:55:34.634 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  159 creating the account statement
+17-08-21 14:55:34.636 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  178 [Account Statement Details:] Statement(date=Tue Aug 17 14:55:34 IST 2021, accountId=SBACS000001, currentBalance=0.0, history=[com.mfpe.account.model.TransactionsHistory@68608eb4])
+17-08-21 14:55:34.687 main                  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  119 fetching account details
+17-08-21 14:55:34.689 main                  INFO .m.a.s.AccountServiceImpl       getCustomerAccounts  127 [Account Details:] [AccountDto(accountId=SBACS000001, balance=0.0), AccountDto(accountId=SBACC000001, balance=0.0)]
+17-08-21 14:55:34.701 main                  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 14:55:34.702 main                 ERROR .m.a.s.AccountServiceImpl                getAccount  105 Account with account ID: SBACS000001not found
+17-08-21 14:55:34.717 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  145 fetching transaction details
+17-08-21 14:55:34.718 main                 ERROR .m.a.s.AccountServiceImpl       getAccountStatement  184 Account with account ID: SBACS000001not found
+17-08-21 14:55:34.732 main                  INFO .m.a.s.AccountServiceImpl                   deposit  253 Money deposit under process
+17-08-21 14:55:34.733 main                 ERROR .m.a.s.AccountServiceImpl                   deposit  280 Account with account ID: SBACS000001not found
+17-08-21 14:55:34.747 main                  INFO .m.a.s.AccountServiceImpl                  withdraw  297 Money withdraw under process
+17-08-21 14:55:34.748 main                  INFO .m.a.s.AccountServiceImpl                  withdraw  323 [ SBACS000001 Transaction Details:] TransactionStatus(message=Money withdraw transaction successfull, sourceBalance=2000.0, destinationBalance=1000.0)
+17-08-21 14:55:34.761 main                  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 14:55:34.762 main                  INFO .m.a.s.AccountServiceImpl                getAccount   89 [Account Details:] Account(accountId=SBACS000001, customerId=SBCU000001, balance=0.0, accountType=SAVINGS)
+17-08-21 14:55:34.775 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  203 fetching transaction details
+17-08-21 14:55:34.776 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  211 creating the account statement
+17-08-21 14:55:34.778 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  230 [Account Statement Details:] Statement(date=Tue Aug 17 14:55:34 IST 2021, accountId=SBACS000001, currentBalance=0.0, history=[com.mfpe.account.model.TransactionsHistory@269ed100])
+17-08-21 14:55:34.792 main                  INFO .m.a.s.AccountServiceImpl       getAccountStatement  145 fetching transaction details
+17-08-21 14:55:34.792 main                 ERROR .m.a.s.AccountServiceImpl       getAccountStatement  149 Given date range is invalid, From Date should always be before To Date
+17-08-21 14:55:34.806 main                  INFO .m.a.s.AccountServiceImpl                   deposit  253 Money deposit under process
+17-08-21 14:55:34.807 main                  INFO .m.a.s.AccountServiceImpl                   deposit  274 [ SBACS000001 Transaction Details:] TransactionStatus(message=Money deposit transaction successfull, sourceBalance=0.0, destinationBalance=1000.0)
+17-08-21 14:55:34.824 main                  INFO .m.a.s.AccountServiceImpl                  withdraw  297 Money withdraw under process
+17-08-21 14:55:34.826 main                 ERROR .m.a.s.AccountServiceImpl                  withdraw  336 Account with account ID: SBACS000001not found
+17-08-21 14:55:34.843 main                  INFO .m.a.s.AccountServiceImpl                getAccount   79 fetching account details
+17-08-21 14:55:34.843 main                 ERROR .m.a.s.AccountServiceImpl                getAccount   98 Account with account ID: SBACS000001not found
+17-08-21 14:55:35.833 licationShutdownHook DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 14:55:35.860 licationShutdownHook  INFO c.z.h.HikariDataSource                        close  350 HikariPool-1 - Shutdown initiated...
+17-08-21 14:55:35.866 licationShutdownHook  INFO c.z.h.HikariDataSource                        close  352 HikariPool-1 - Shutdown completed.
+17-08-21 15:04:14.322 ction(188)-127.0.0.1 DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 15:04:14.643 ction(188)-127.0.0.1  INFO c.z.h.HikariDataSource                        close  350 HikariPool-12 - Shutdown initiated...
+17-08-21 15:04:14.658 ction(188)-127.0.0.1  INFO c.z.h.HikariDataSource                        close  352 HikariPool-12 - Shutdown completed.
+17-08-21 15:14:16.742 restartedMain         INFO .m.a.AccountMsApplication               logStarting   55 Starting AccountMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 5136 (E:\MFPE\Back-end\account-ms\target\classes started by tejat in E:\MFPE\Back-end\account-ms)
+17-08-21 15:14:16.750 restartedMain        DEBUG .m.a.AccountMsApplication               logStarting   56 Running with Spring Boot v2.5.3, Spring v5.3.9
+17-08-21 15:14:16.750 restartedMain         INFO .m.a.AccountMsApplication     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 15:14:20.643 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 15:14:20.644 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 15:14:20.853 restartedMain         INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 15:14:20.916 restartedMain         INFO c.z.h.HikariDataSource                getConnection  110 HikariPool-1 - Starting...
+17-08-21 15:14:21.247 restartedMain         INFO c.z.h.HikariDataSource                getConnection  123 HikariPool-1 - Start completed.
+17-08-21 15:14:23.991 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 drop table if exists account CASCADE 
+17-08-21 15:14:24.001 restartedMain        DEBUG org.hibernate.SQL                      logStatement  144 create table account (account_id varchar(255) not null, account_type integer, balance double not null, customer_id varchar(255), primary key (account_id))
+17-08-21 15:14:26.433 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 15:14:30.945 restartedMain         INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 15:14:31.004 restartedMain         INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 15:14:31.081 restartedMain         INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 15:14:31.440 restartedMain         INFO .m.a.AccountMsApplication                logStarted   61 Started AccountMsApplication in 17.688 seconds (JVM running for 19.63)
+17-08-21 15:14:31.449 restartedMain         INFO .m.a.AccountMsApplication                      main   20 Account Main Application Started
+17-08-21 15:17:35.959 http-nio-9096-exec-1  INFO o.a.c.c.C.[.[.[/account]                        log  173 Initializing Spring DispatcherServlet 'dispatcherServlet'

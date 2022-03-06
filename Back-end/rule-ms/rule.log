@@ -1,0 +1,156 @@
+17-08-21 11:59:17.844 restartedMain         INFO c.m.r.RulesMsApplication                logStarting   55 Starting RulesMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 14140 (E:\MFPE\Back-end\rule-ms\target\classes started by tejat in E:\MFPE\Back-end\rule-ms)
+17-08-21 11:59:17.862 restartedMain         INFO c.m.r.RulesMsApplication      logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 11:59:20.743 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 11:59:20.744 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 11:59:20.904 restartedMain         INFO o.a.c.c.C.[.[.[/rule]                           log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 11:59:21.959 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 11:59:25.491 restartedMain         INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 11:59:25.525 restartedMain         INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 11:59:25.560 restartedMain         INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 11:59:25.738 restartedMain         INFO c.m.r.RulesMsApplication                 logStarted   61 Started RulesMsApplication in 10.666 seconds (JVM running for 12.722)
+17-08-21 12:10:11.414 http-nio-9093-exec-1  INFO o.a.c.c.C.[.[.[/rule]                           log  173 Initializing Spring DispatcherServlet 'dispatcherServlet'
+17-08-21 12:10:11.602 http-nio-9093-exec-1  INFO c.m.r.c.RuleController            getServiceCharges   57 requesting rule service to calculate the service charges
+17-08-21 12:10:13.713 http-nio-9093-exec-1 ERROR [.[.[.[dispatcherServlet]                       log  175 Servlet.service() for servlet [dispatcherServlet] in context with path [/rule] threw exception [Request processing failed; nested exception is feign.RetryableException: Connection refused: connect executing GET http://localhost:9096/account/getCustomerAccounts/SBCU000000] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1570)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at feign.Client$Default.convertResponse(Client.java:108)
+	at feign.Client$Default.execute(Client.java:104)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:119)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:89)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100)
+	at com.sun.proxy.$Proxy79.getCustomerAccounts(Unknown Source)
+	at com.mfpe.rule.service.RuleServiceImpl.getServiceCharges(RuleServiceImpl.java:112)
+	at com.mfpe.rule.controller.RuleController.getServiceCharges(RuleController.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+17-08-21 12:28:11.637 http-nio-9093-exec-3  INFO c.m.r.c.RuleController            getServiceCharges   57 requesting rule service to calculate the service charges
+17-08-21 12:28:57.444 http-nio-9093-exec-2  INFO c.m.r.c.RuleController               evaluateMinBal   41 requesting rule service to evaluate the amount with minimum balance criteria
+17-08-21 12:28:57.650 http-nio-9093-exec-2 ERROR c.m.r.s.RuleServiceImpl              evaluateMinBal   72 The transaction is denied
+17-08-21 12:31:49.211 http-nio-9093-exec-5  INFO c.m.r.c.RuleController               evaluateMinBal   41 requesting rule service to evaluate the amount with minimum balance criteria
+17-08-21 12:31:49.252 http-nio-9093-exec-5  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   67 The transaction is partially accepted
+17-08-21 12:40:07.843 http-nio-9093-exec-6  INFO c.m.r.c.RuleController            getServiceCharges   57 requesting rule service to calculate the service charges
+17-08-21 13:10:00.765 main                  INFO m.r.s.RuleServiceImplTest               logStarting   55 Starting RuleServiceImplTest using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 28900 (started by tejat in E:\MFPE\Back-end\rule-ms)
+17-08-21 13:10:00.768 main                  INFO m.r.s.RuleServiceImplTest     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 13:10:05.885 main                  INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 13:10:09.261 main                  INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 13:10:09.316 main                  INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 13:10:09.366 main                  INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 13:10:09.696 main                  INFO m.r.s.RuleServiceImplTest                logStarted   61 Started RuleServiceImplTest in 11.121 seconds (JVM running for 13.374)
+17-08-21 13:10:11.040 main                  INFO c.m.r.s.RuleServiceImpl              evaluateMinBal   81 The transaction is accepted
+17-08-21 13:10:11.295 main                 ERROR c.m.r.s.RuleServiceImpl              evaluateMinBal   72 The transaction is denied
+17-08-21 13:10:11.346 main                  INFO c.m.r.s.RuleServiceImpl              evaluateMinBal   81 The transaction is accepted
+17-08-21 13:10:11.382 main                 ERROR c.m.r.s.RuleServiceImpl              evaluateMinBal   89 The transaction is denied
+17-08-21 13:10:11.399 main                  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   85 The transaction is partially accepted
+17-08-21 13:10:11.446 main                  INFO c.m.r.s.RuleServiceImpl              evaluateMinBal   62 The transaction is accepted
+17-08-21 13:10:11.461 main                  INFO c.m.r.s.RuleServiceImpl              evaluateMinBal   62 The transaction is accepted
+17-08-21 13:10:11.476 main                  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   67 The transaction is partially accepted
+17-08-21 13:10:11.490 main                  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   85 The transaction is partially accepted
+17-08-21 13:10:11.522 main                 ERROR c.m.r.s.RuleServiceImpl           getServiceCharges  107 JWT required for validating the access to this resource
+17-08-21 13:10:11.543 main                  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   67 The transaction is partially accepted
+17-08-21 13:10:22.922 main                  INFO .m.r.c.RuleControllerTest               logStarting   55 Starting RuleControllerTest using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 4260 (started by tejat in E:\MFPE\Back-end\rule-ms)
+17-08-21 13:10:22.926 main                  INFO .m.r.c.RuleControllerTest     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 13:10:26.100 main                  INFO .m.r.c.RuleControllerTest                logStarted   61 Started RuleControllerTest in 5.374 seconds (JVM running for 7.739)
+17-08-21 13:10:26.576 main                  INFO c.m.r.c.RuleController               evaluateMinBal   41 requesting rule service to evaluate the amount with minimum balance criteria
+17-08-21 13:10:27.106 main                  INFO c.m.r.c.RuleController            getServiceCharges   57 requesting rule service to calculate the service charges
+17-08-21 14:58:15.527 main                  INFO m.r.s.RuleServiceImplTest               logStarting   55 Starting RuleServiceImplTest using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 15444 (started by tejat in E:\MFPE\Back-end\rule-ms)
+17-08-21 14:58:15.538 main                  INFO m.r.s.RuleServiceImplTest     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 14:58:19.439 main                  INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 14:58:22.706 main                  INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 14:58:22.759 main                  INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 14:58:22.809 main                  INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 14:58:23.141 main                  INFO m.r.s.RuleServiceImplTest                logStarted   61 Started RuleServiceImplTest in 10.204 seconds (JVM running for 12.334)
+17-08-21 14:58:24.331 main                  INFO c.m.r.s.RuleServiceImpl              evaluateMinBal   81 The transaction is accepted
+17-08-21 14:58:24.669 main                 ERROR c.m.r.s.RuleServiceImpl              evaluateMinBal   72 The transaction is denied
+17-08-21 14:58:24.711 main                  INFO c.m.r.s.RuleServiceImpl              evaluateMinBal   81 The transaction is accepted
+17-08-21 14:58:24.748 main                 ERROR c.m.r.s.RuleServiceImpl              evaluateMinBal   89 The transaction is denied
+17-08-21 14:58:24.764 main                  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   85 The transaction is partially accepted
+17-08-21 14:58:24.794 main                  INFO c.m.r.s.RuleServiceImpl              evaluateMinBal   62 The transaction is accepted
+17-08-21 14:58:24.808 main                  INFO c.m.r.s.RuleServiceImpl              evaluateMinBal   62 The transaction is accepted
+17-08-21 14:58:24.824 main                  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   67 The transaction is partially accepted
+17-08-21 14:58:24.837 main                  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   85 The transaction is partially accepted
+17-08-21 14:58:24.865 main                 ERROR c.m.r.s.RuleServiceImpl           getServiceCharges  107 JWT required for validating the access to this resource
+17-08-21 14:58:24.887 main                  WARN c.m.r.s.RuleServiceImpl              evaluateMinBal   67 The transaction is partially accepted
+17-08-21 14:58:26.834 main                  INFO .m.r.c.RuleControllerTest               logStarting   55 Starting RuleControllerTest using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 15444 (started by tejat in E:\MFPE\Back-end\rule-ms)
+17-08-21 14:58:26.836 main                  INFO .m.r.c.RuleControllerTest     logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 14:58:27.927 main                  INFO .m.r.c.RuleControllerTest                logStarted   61 Started RuleControllerTest in 2.933 seconds (JVM running for 17.12)
+17-08-21 14:58:28.021 main                  INFO c.m.r.c.RuleController               evaluateMinBal   41 requesting rule service to evaluate the amount with minimum balance criteria
+17-08-21 14:58:28.232 main                  INFO c.m.r.c.RuleController            getServiceCharges   57 requesting rule service to calculate the service charges
+17-08-21 15:14:22.398 restartedMain         INFO c.m.r.RulesMsApplication                logStarting   55 Starting RulesMsApplication using Java 1.8.0_291 on LAPTOP-AIR63DJ5 with PID 22904 (E:\MFPE\Back-end\rule-ms\target\classes started by tejat in E:\MFPE\Back-end\rule-ms)
+17-08-21 15:14:22.405 restartedMain         INFO c.m.r.RulesMsApplication      logStartupProfileInfo  659 No active profile set, falling back to default profiles: default
+17-08-21 15:14:25.680 restartedMain         INFO o.a.c.c.StandardService                         log  173 Starting service [Tomcat]
+17-08-21 15:14:25.681 restartedMain         INFO o.a.c.core.StandardEngine                       log  173 Starting Servlet engine: [Apache Tomcat/9.0.50]
+17-08-21 15:14:25.926 restartedMain         INFO o.a.c.c.C.[.[.[/rule]                           log  173 Initializing Spring embedded WebApplicationContext
+17-08-21 15:14:27.237 restartedMain         INFO uestMappingHandlerMapping        initHandlerMethods   69 Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+17-08-21 15:14:31.410 restartedMain         INFO tationPluginsBootstrapper                     start  160 Context refreshed
+17-08-21 15:14:31.475 restartedMain         INFO tationPluginsBootstrapper                     start  163 Found 1 custom documentation plugin(s)
+17-08-21 15:14:31.545 restartedMain         INFO piListingReferenceScanner                      scan   41 Scanning for api listing references
+17-08-21 15:14:31.996 restartedMain         INFO c.m.r.RulesMsApplication                 logStarted   61 Started RulesMsApplication in 12.174 seconds (JVM running for 13.992)
+17-08-21 15:18:09.577 http-nio-9093-exec-1  INFO o.a.c.c.C.[.[.[/rule]                           log  173 Initializing Spring DispatcherServlet 'dispatcherServlet'

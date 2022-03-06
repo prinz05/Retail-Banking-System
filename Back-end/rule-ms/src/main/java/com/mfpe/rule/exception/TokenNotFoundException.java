@@ -1,0 +1,15 @@
+package com.mfpe.rule.exception;
+
+public class TokenNotFoundException extends RuntimeException {
+
+	/**
+	 * TokenNotFoundException Exception Class which will be raised when the request
+	 * header doesn't contain the JWT token
+	 */
+	private static final long serialVersionUID = -6481965221919278587L;
+
+	public TokenNotFoundException() {
+		super();
+	}
+
+}
